@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 */node_modules
 */.vscode
 */coverage
 */.parcel-cache
 */dist
+=======
+node_modules
+*/node_modules
+*/.vscode
+*/coverage
+>>>>>>> 2e4f3d0 (solution for lab 1)
