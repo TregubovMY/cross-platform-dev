@@ -29,7 +29,6 @@ class MiniMaple {
     return `${newCoefficient > 0 && member[0] === '+' ? '+' : ''}${newCoefficient === 1 && newDegree !== 0 ? '' : newCoefficient}${newDegree > 0 ? `*${variable}${newDegree > 1 ? '^' + newDegree : ''}` : ''}`;
   }
 
-  // Основной метод для дифференцирования выражения по переменной
   diff(variable) {
     const result = this.members.map(member => this.#differentiateMember(member, variable))
                                .filter(member => member) // Фильтрация пустых значений

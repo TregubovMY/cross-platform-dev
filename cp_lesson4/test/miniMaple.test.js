@@ -16,5 +16,7 @@ describe('MiniMaple', () => {
     it('', () => { expect(new MiniMaple('x^3-x').diff('x')).toStrictEqual(new MiniMaple('3*x^2 - 1')); });
 
     it('', () => { expect(new MiniMaple('x^3+x+6').diff('x')).toStrictEqual(new MiniMaple('3*x^2 + 1')); });
+
+    it('', () => { expect(new MiniMaple('-x^3+x+6').diff('x')).toStrictEqual(new MiniMaple('-3*x^2 + 1')); });
   });
 });

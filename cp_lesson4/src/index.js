@@ -1,14 +1,18 @@
-document.addEventListener('DOMContentLoaded',setup)
+import {MiniMaple} from "./miniMaple";
 
-function setup() {
-    document.getElementById('demoButton').onclick = addSomething;
-}
+const expressionInput = document.getElementById('expression');
+        const variableInput = document.getElementById('variable');
+        const diffButton = document.getElementById('diffButton');
+        const resultSpan = document.getElementById('result');
 
-function addSomething(){
-    const someDummyDiv = document.createElement('div');
-    someDummyDiv.classList.add('generated');
-    const count = document.getElementsByClassName('generated').length;
-    someDummyDiv.innerHTML = `I was created by JS! There are already ${count} of my friends!`;
-    const container = document.getElementById('container');
-    container.appendChild(someDummyDiv);
-}
+        diffButton.addEventListener('click', () => {
+            try {
+                const expression = expressionInput.value;
+                const variable = variableInput.value;
+                const miniMaple = new MiniMaple(expression);
+                const result = miniMaple.diff(variable);
+                resultSpan.textContent = result.members.join('');
+            } catch (error) {
+                resultSpan.textContent = 'Ошибка: ' + error.message;
+            }
+        });
