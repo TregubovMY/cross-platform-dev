@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.widgets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stats{
+    flex-grow: 0.2;
+    height: 800px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: black 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
